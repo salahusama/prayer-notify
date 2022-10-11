@@ -1,0 +1,20 @@
+{
+  "name": "prayer-notify",
+  "version": "1.0.0",
+  "description": "Runs in the background and sends notifications when it's time for prayer.",
+  "main": "lib/prayer.js",
+  "preferGlobal": true,
+  "author": "salahakl",
+  "license": "ISC",
+  "scripts": {
+    "start": "node --no-warnings bin/start-prayer-service.js"
+  },
+  "bin": {
+    "prayer-notify": "bin/start-prayer-service.js"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1",
+    "play-sound": "^1.1.5",
+    "simple-node-logger": "^21.8.12"
+  }
+}

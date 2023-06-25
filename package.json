@@ -7,7 +7,10 @@
   "author": "salahakl",
   "license": "ISC",
   "scripts": {
-    "start": "node --no-warnings bin/start-prayer-service.js"
+    "start": "pm2 start 'node --no-warnings bin/start-prayer-service.js'",
+    "stop": "echo \"Run: 'npm run pm2 list' to find the process id and then 'npm run pm2 stop <id>'\"",
+    "pm2": "pm2",
+    "logs": "pm2 logs"
   },
   "bin": {
     "prayer-notify": "bin/start-prayer-service.js"
@@ -15,6 +18,7 @@
   "dependencies": {
     "node-notifier": "^10.0.1",
     "play-sound": "^1.1.5",
+    "pm2": "^5.3.0",
     "simple-node-logger": "^21.8.12"
   }
 }

@@ -1,0 +1,6 @@
+{
+  "apps" : [{
+  "exec_mode": "fork",
+  "instances": 1
+  }]
+}

@@ -7,13 +7,13 @@
   "author": "salahakl",
   "license": "ISC",
   "scripts": {
-    "start": "pm2 start ecosystem.config.js",
-    "stop": "echo \"Run: 'npm run pm2 list' to find the process id and then 'npm run pm2 stop <id>'\"",
-    "pm2": "pm2",
-    "logs": "pm2 logs"
+    "start": "node --no-warnings bin/prayer-notify.js",
+    "pm2": "pm2"
   },
   "bin": {
-    "prayer-notify": "bin/start-prayer-service.js"
+    "prayer-notify": "bin/prayer-notify.js",
+    "prayer-notify-start": "bin/start-prayer-service.js",
+    "prayer-notify-stop": "bin/stop-prayer-service.js"
   },
   "dependencies": {
     "node-notifier": "^10.0.1",

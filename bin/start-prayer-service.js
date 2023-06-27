@@ -1,5 +1,18 @@
 #!/usr/bin/env node --no-warnings
 
-const PrayerService = require('../lib/scheduler')
+const pm2 = require('pm2')
 
-PrayerService.start()
+pm2.start({
+  name: 'prayer-notify',
+  instances: 1,
+  exec_mode: 'fork',
+  script: 'prayer-notify',
+}, (err) => {
+  if (err) {
+    console.error('Error starting process:', err)
+  } else {
+    console.log('Process started successfully!')
+  }
+
+  pm2.disconnect()
+})

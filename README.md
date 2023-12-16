@@ -7,7 +7,7 @@ It also plays a reminder notification 20 minutes before the next prayer. This re
 _**Experimental:** Depending on your system, a notification may also be shown._
 
 ### Requirements
-
+- git - https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 - nodejs - https://nodejs.org/en/download
 - npm _(installed with nodejs)_
 
@@ -16,7 +16,8 @@ _**Experimental:** Depending on your system, a notification may also be shown._
 ```
 git clone https://github.com/salahusama/prayer-notify
 cd prayer-notify
-npm i -g .
+npm install
+sudo npm install -g .
 ```
 
 ### Usage
